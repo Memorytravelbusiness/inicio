@@ -1,54 +1,49 @@
-var xhr = new XMLHttpRequest();
-xhr.open('GET',
-    'https://www.googleapis.com/drive/v3/about?fields=user&' +
-    'access_token=' + params['access_token']);
-xhr.onreadystatechange = function (e) {
-  console.log(xhr.response);
-};
-xhr.send(null);
+/* Please ❤ this if you like it! */
 
-//  * Create form to request access token from Google's OAuth 2.0 server.
-//  */
-function oauthSignIn() {
-  // Google's OAuth 2.0 endpoint for requesting an access token
-  var oauth2Endpoint = 'https://accounts.google.com/o/oauth2/v2/auth';
+(function($) { "use strict";
 
-  // Create <form> element to submit parameters to OAuth 2.0 endpoint.
-  var form = document.createElement('form');
-  form.setAttribute('method', 'GET'); // Send as a GET request.
-  form.setAttribute('action', oauth2Endpoint);
+	$(function() {
+		var header = $(".start-style");
+		$(window).scroll(function() {    
+			var scroll = $(window).scrollTop();
+		
+			if (scroll >= 10) {
+				header.removeClass('start-style').addClass("scroll-on");
+			} else {
+				header.removeClass("scroll-on").addClass('start-style');
+			}
+		});
+	});		
+		
+	//Animation
+	
+	$(document).ready(function() {
+		$('body.hero-anime').removeClass('hero-anime');
+	});
 
-  // Parameters to pass to OAuth 2.0 endpoint.
-  var params = {'client_id': '794781427005-4tv045lv55nfc12tg9evluc8i46k44c1.apps.googleusercontent.com',
-                'redirect_uri': 'https://memorytravelbusiness.github.io/inicio-memorytravel/',
-                'response_type': 'token',
-                'scope': 'https://www.googleapis.com/auth/drive.metadata.readonly',
-                'include_granted_scopes': 'true',
-                'state': 'pass-through value'};
-
-  // Add form parameters as hidden input values.
-  for (var p in params) {
-    var input = document.createElement('input');
-    input.setAttribute('type', 'hidden');
-    input.setAttribute('name', p);
-    input.setAttribute('value', params[p]);
-    form.appendChild(input);
-  }
-
-  // Add form to page and submit it to open the OAuth 2.0 endpoint.
-  document.body.appendChild(form);
-  form.submit();
-}
-
-{ "web"= { "client_id": "794781427005-4tv045lv55nfc12tg9evluc8i46k44c1.apps.googleusercontent.com", "project_id": "alpine-air-362623", "auth_uri": "https://accounts.google.com/o/oauth2/auth", "token_uri": "https://oauth2.googleapis.com/token", "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs", "redirect_uris": ["https://memorytravelbusiness.github.io/login/"] } }
-
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
-
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-});
+	//Menu On Hover
+		
+	$('body').on('mouseenter mouseleave','.nav-item',function(e){
+			if ($(window).width() > 750) {
+				var _d=$(e.target).closest('.nav-item');_d.addClass('show');
+				setTimeout(function(){
+				_d[_d.is(':hover')?'addClass':'removeClass']('show');
+				},1);
+			}
+	});	
+	
+	//Switch light/dark
+	
+	$("#switch").on('click', function () {
+		if ($("body").hasClass("dark")) {
+			$("body").removeClass("dark");
+			$("#switch").removeClass("switched");
+		}
+		else {
+			$("body").addClass("dark");
+			$("#switch").addClass("switched");
+		}
+	});  
+	
+})(jQuery);
+  
