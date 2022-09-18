@@ -191,7 +191,7 @@ h1{
 	font-size: 48px;
 	line-height: 1.2;
 	font-weight: 700;
-	color: #ffffff;
+	color: #000000;
 	text-align: center;
 }
 
@@ -277,7 +277,7 @@ body.dark .navbar-brand img{
 }
 body.dark .dropdown-item:hover {
 	color: #000;
-	background-color: #00bec4;
+	background-color: #ff7b00f5;
 }
 body.dark .containerr {
 	  text-align: center;
@@ -290,7 +290,7 @@ body.dark .containerr {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(https://i.im.ge/2022/09/14/1oo6xS.pridncipe.png);
+  background-image: url(file:///C:/Users/Acer/Downloads/pridncipe.png);
   background-size: cover;
   background-position: center;
 }
@@ -457,9 +457,10 @@ body.dark .card-item {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: url() ;
   background-size: cover;
   background-position: center;
-  background-image: url("https://i.im.ge/2022/09/14/1orZPz.fondoprime.png");
+  background-image: url('https://i.im.ge/2022/09/18/12NvxY.fond.png');
   
 /*  this is where the magic happens:  */
   background-attachment: fixed;
@@ -589,7 +590,7 @@ body.dark .cards .card-title {
   margin-bottom: 0.2em;
 }
 .cards .card-image1 {
-  background-image: url(https://i.im.ge/2022/09/14/1ooNJz.arsrebdsgu.png);
+  background-image: url(https://i.im.ge/2022/09/18/12PmWX.arsrebdsgu.png);
   height: 200px;
   overflow: hidden;
   background-size: cover;
@@ -601,7 +602,7 @@ body.dark .cards .card-title {
 }
 
 .cards .card-image2 {
-  background-image: url(https://i.im.ge/2022/09/14/1ootd6.arsdsgu.png);
+  background-image: url(https://i.im.ge/2022/09/18/12P6T8.arsdsgu.png);
   height: 200px;
   overflow: hidden;
   background-size: cover;
@@ -613,7 +614,7 @@ body.dark .cards .card-title {
 }
 
 .cards .card-image3 {
-  background-image: url(https://i.im.ge/2022/09/14/1ooyPF.plantas.png);
+  background-image: url(https://i.im.ge/2022/09/18/12P9FK.plantas.png);
   height: 200px;
   overflow: hidden;
   background-size: cover;
@@ -625,7 +626,7 @@ body.dark .cards .card-title {
 }
 
 .cards .card-image4 {
-  background-image: url(https://i.im.ge/2022/09/14/1oopQf.sismos.png);
+  background-image: url(https://i.im.ge/2022/09/18/12Pjj9.sismos.png);
   height: 200px;
   overflow: hidden;
   background-size: cover;
@@ -637,7 +638,7 @@ body.dark .cards .card-title {
 }
 
 .cards .card-image5 {
-  background-image: url(https://i.im.ge/2022/09/14/1oozR1.aguaa.png);
+  background-image: url(https://i.im.ge/2022/09/18/12P0zF.aguaa.png);
   height: 200px;
   overflow: hidden;
   background-size: cover;
@@ -649,7 +650,7 @@ body.dark .cards .card-title {
 }
 
 .cards .card-image6 {
-  background-image: url(https://i.im.ge/2022/09/14/1ook9P.picaso.png);
+  background-image: url(https://i.im.ge/2022/09/18/12Pit6.picaso.png);
   height: 200px;
   overflow: hidden;
   background-size: cover;
