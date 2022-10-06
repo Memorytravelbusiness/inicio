@@ -608,6 +608,43 @@ body.dark .cards .card-title {
   transition: all 0.3s ease-out;
   transform: scale(1, 1);
 }
+.otro {
+margin: -25px 0 -10px 145px;
+top: -26px;
+  background: rgb(1, 13, 82); /* color de fondo */
+  color: #000000; /* color de fuente */
+  border: 2px solid #000000; /* tamaño y color de borde */
+  padding: 12px 20px;
+  font-family: 'Century Gothic';
+  border-radius: 12px; /* redondear bordes */
+  width: 155px;
+  position: relative;
+  z-index: 1;
+  position: re;
+  overflow: hidden;
+  display: inline-block;
+}
+.otro:hover {
+  color: rgb(0, 0, 0);/* color de fuente hover */
+}
+.otro::after {
+  content: "";
+  background: #00778b; /* color de fondo hover */
+  position: absolute;
+  z-index: -1;
+  padding: 10px 10px;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: scale(0, 0);
+  transition: all 0.3s ease;
+}
+.otro:hover::after {
+  transition: all 0.3s ease-out;
+  transform: scale(1, 1);
+}
 .cards .card-image1 {
   background-image: url(https://i.im.ge/2022/09/18/12PmWX.arsrebdsgu.png);
   height: 200px;
