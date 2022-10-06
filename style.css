@@ -109,7 +109,8 @@ body.dark .navbar-brand img{
     transition: all 300ms linear;
 }
 .navbar-light .navbar-toggler-icon:after{
-	top: 8px;
+	height: 40px;
+	width: 40px;
 }
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
 	transform: rotate(45deg);
