@@ -573,18 +573,40 @@ body.dark .cards .card-title {
   color: #ff9900;
   margin-bottom: 0.2em;
 }
-.guardar {
-	display:inline-flex;
-		background-color:rgb(255, 255, 255);
-		color:#000000;
-		font-weight: 600;
-		width: 80px;
-		font-size: 0.875rem;
-		padding: 0.5em 0.75em;
-		line-height: 1;
-		border-radius: 6px; 
-		margin: 0.5rem;
-      cursor: pointer;
+/*** ESTILOS BOTÓN GROW BOX ***/
+.ov-btn-grow-box {
+  background: rgb(1, 13, 82); /* color de fondo */
+  color: #000000; /* color de fuente */
+  border: 2px solid #000000; /* tamaño y color de borde */
+  padding: 12px 20px;
+  font-family: 'Century Gothic';
+  border-radius: 12px; /* redondear bordes */
+  position: relative;
+  width: 135px;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+}
+.ov-btn-grow-box:hover {
+  color: rgb(0, 0, 0);/* color de fuente hover */
+}
+.ov-btn-grow-box::after {
+  content: "";
+  background: #ee2400; /* color de fondo hover */
+  position: absolute;
+  z-index: -1;
+  padding: 10px 10px;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: scale(0, 0);
+  transition: all 0.3s ease;
+}
+.ov-btn-grow-box:hover::after {
+  transition: all 0.3s ease-out;
+  transform: scale(1, 1);
 }
 .cards .card-image1 {
   background-image: url(https://i.im.ge/2022/09/18/12PmWX.arsrebdsgu.png);
