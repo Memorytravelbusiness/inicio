@@ -47,3 +47,36 @@
 	
 })(jQuery);
   
+function myFunction() {
+	var btn = document.getElementById("myButton");
+	if (btn.value == "Open Curtain") {
+		btn.value = "Close Curtain"; btn.innerHTML = "⚡​ Guardar​​";
+		btn.addEventListener('click', () => myButton.style.backgroundColor="#FF8700")
+	} else {
+		btn.value = "Open Curtain"; btn.innerHTML = "Guardado 🧡​​";
+		btn.addEventListener('click', () => myButton.style.backgroundColor="#001B69")
+	}
+}
+
+function searchToggle(obj, evt){
+    var container = $(obj).closest('.search-wrapper');
+        if(!container.hasClass('active')){
+            container.addClass('active');
+            evt.preventDefault();
+        }
+        else if(container.hasClass('active') && $(obj).closest('.input-holder').length == 0){
+            container.removeClass('active');
+            // clear input
+            container.find('.search-input').val('');
+        }
+}
+$(document).ready(function() {
+  $("#navMenu").click(function() {
+   //$(".nav").toggleClass("small");
+    if ($(".navn").hasClass("small")) {
+      $(".navn").removeClass("small");
+    } else {
+      $(".navn").addClass("small");
+    }
+  });
+});
