@@ -7,10 +7,8 @@
 ================================================== */
 /* font family: poiretone */
 body{
-    font-family: 'Poppins', sans-serif; 
+  font-family: 'DynaPuff', cursive;
 	font-size: 16px;
-	line-height: 24px;
-	font-weight: 200;
 	color: #212112;
 	background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg');
 	background-position: center;
@@ -250,6 +248,10 @@ body.dark .nav-item:hover .nav-link{
 	border-radius: 10px;
     transition: all 0.5s linear;
 }
+
+.span {
+  font-size: 12px;
+}
 .dropdown-item:hover, 
 .dropdown-item:focus {
 	color: rgb(0, 0, 0);
@@ -258,7 +260,7 @@ body.dark .nav-item:hover .nav-link{
 .switch {
 	content: "";
 	background: rgb(255, 255, 255);
-	width: 140px;
+	width: 35px;
 	height: 30px;
 	border-radius: 20px;
 	position: relative;
@@ -267,10 +269,9 @@ body.dark .nav-item:hover .nav-link{
 	display: flex;
 	outline: none;
 	filter: brightness(100%);
-	border: 1px solid #000000;
-		cursor: pointer;
+	cursor: pointer;
 	-webkit-transition: all 300ms linear;
-	transition: all 300ms linear; 
+	transition: all 500ms linear; 
 	}
 	
 body.dark{
@@ -284,7 +285,7 @@ body.dark .navbar-brand img{
 }
 body.dark .dropdown-item:hover {
 	color: #000;
-	background-color: #ff7b00f5;
+	background-color: #dbdbdbf5;
 }
 body.dark .containerr {
 	  text-align: center;
@@ -303,9 +304,9 @@ body.dark .containerr {
 }
 
 body.dark .switch{
-  background: #000;
+  background: rgb(255, 255, 255);
   color: #fff;
-  border: 1px solid #ffffff;
+  border: 1px solid black;
 }
 body.dark h1{
 	color: #fff;
@@ -373,10 +374,24 @@ body.dark .card-intro {
 body.dark .card-item {
   display: flex;
   flex-direction: column;
-  background-color: rgba(71, 0, 0, 0.685);
+  background-color: rgb(0, 0, 0);
   width: 100%;
+  border: 1px solid white;
   border-radius: 6px;
   box-shadow: 0 20px 40px -14px rgba(10, 10, 10, 0.979);
+  overflow: hidden;
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+}
+
+body.dark .card-item:hover {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 6px;
+  box-shadow: 0 20px 36px -14px rgba(253, 253, 253, 0.233);
   overflow: hidden;
   transition: transform 0.5s;
   -webkit-transition: transform 0.5s;
@@ -386,26 +401,28 @@ body.dark .card-item {
 
 .containerrr {
   /*padding:150px;*/
-  background: #2f2f3100;
+  background: #ffffff00;
 }
 
 #navMenu {
   top: -10px;
   left: -90px;
-  width: 50px;
+  width: 100px;
   height: 50px;
-  border-radius: 50px;
+  border-radius:10px;
   z-index: 100;
-  background: linear-gradient(90deg, #ffac2e, #ff5e00, #ffc400);
-  -webkit-background: linear-gradient(90deg, #ffb109, #ff9900, #ffbb00);
+  background: linear-gradient(90deg, #d4d4d4, #ffffff, #e2e2e2);
+  -webkit-background: linear-gradient(90deg, #ffffff, #ffffff, #f1f1f1);
   background-size: 400% 400%;
   -webkit-background-size: 400% 400%;
-  animation: gradient 5s infinite;
+  animation: gradient 8s infinite;
   -webkit-animation: gradient 5s infinite;
+  transition: all 1s ease;
 }
 
 #navMenu:hover {
-  background: #ffae00;
+  background: #e2e2e2;
+  transition: all 1s ease;
 }
 .navn:hover {
 	background: #0079a8;
@@ -426,24 +443,20 @@ body.dark .card-item {
   position: absolute;
   width: 50px;
   height: 50px;
-  transform: rotate(45deg);
-    border-radius: 50px;
-  -webkit-transform: rotate(45deg);
+    border-radius: 10px;
   background: #001d24;
   margin: 10px;
   cursor: pointer;
-  box-shadow: 1px 4px 10px #1010103f;
 }
 
 .diamond:active {
   background: #04003f;
-  box-shadow: 0px 1px 2.5px #1010106b;
   transition: 20s;
   border-radius: 50px;
   -webkit-transition: 0.1s;
 }
 
-/*.popUp{
+/* .popUp{
   text-align:center;
   border-radius:10px 0px;
   position:absolute;
@@ -457,11 +470,13 @@ body.dark .card-item {
 
 .#nav1:hover + .popUp{
   width:100px;
-}*/
+} */
 
 .navn {
   transition: 0.5s;
   -webkit-transition: 0.5s;
+      transform: rotate(-360deg);
+  -webkit-transform: rotate(-360deg);
 }
 
 .nav1 {
@@ -470,51 +485,138 @@ body.dark .card-item {
 }
 
 .nav2 {
-  top: 100px;
-  left: -90px;
+  top: 45px;
+  left: -35px;
 }
 
 .nav3 {
-  top: 155px;
+  top: 105px;
   left: -90px;
 }
 
 .nav4 {
-  top: 210px;
-  left: -90px;
+  top: 105px;
+  left: -35px;
 }
 
 .nav5 {
-  top: 265px;
-  left: -90px;
+  top: 165px;
+  left: -65px;
 }
 
 .small {
   top: -10px;
   left: -90px;
+  width: 100px;
+  height: 50px;
   z-index: 10;
-  background: #ffa600;
+  background: #ffffff;
   transition: 0.5s;
   -webkit-transition: 0.5s;
 }
 
 .rotCorrect {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
+  transform: rotate(-360deg);
+  -webkit-transform: rotate(-360deg);
   margin-left: 14px;
   margin-top: 8px;
 }
 
 #mainRotCorrect {
   margin-left: 26px;
-  margin-top: 28px;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
+  margin-top: 15px;
+  transform: rotate(-360deg);
+  -webkit-transform: rotate(-360deg);
   max-width: 90px;
 }
 
 i {
   color: #EEEEEE;
+}
+/*dark menu elegante */
+
+body.dark #navMenu {
+  top: -10px;
+  left: -90px;
+  width: 100px;
+  height: 50px;
+  border-radius:10px;
+  z-index: 100;
+  background: linear-gradient(90deg, #181818, #292929, #0c0c0c);
+  -webkit-background: linear-gradient(90deg, #141414, #252525, #292929);
+  background-size: 400% 400%;
+  -webkit-background-size: 400% 400%;
+  animation: gradient 8s infinite;
+  -webkit-animation: gradient 5s infinite;
+  transition: all 1s ease;
+  border: 1.5px solid black;
+}
+
+body.dark #navMenu:hover {
+  background: #222222;
+  transition: all 1s ease;
+}
+body.dark .navn:hover {
+	background: #ff9100;
+}
+
+body.dark .diamond {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+    border-radius: 15px;
+  background: #330000;
+  margin: 10px;
+  cursor: pointer;
+}
+
+body.dark .diamond:active {
+  background: #006188;
+  transition: 20s;
+  border-radius: 50px;
+  -webkit-transition: 0.1s;
+}
+
+/* .popUp{
+  text-align:center;
+  border-radius:10px 0px;
+  position:absolute;
+  top:100px;
+  left:330px;
+  overflow:hidden;
+  background:red;
+  width:0px;
+  max-width:100px;
+}
+
+.#nav1:hover + .popUp{
+  width:100px;
+} */
+
+body.dark .small {
+  top: -10px;
+  left: -90px;
+  width: 100px;
+  height: 50px;
+  z-index: 10;
+  background: #000000;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+
+body.dark .rotCorrect {
+  transform: rotate(-360deg);
+  -webkit-transform: rotate(-360deg);
+  margin-left: 14px;
+  margin-top: 8px;
+}
+
+body.dark #mainRotCorrect {
+  margin-left: 26px;
+  margin-top: 15px;
+  transform: rotate(-360deg);
+  -webkit-transform: rotate(-360deg);
+  max-width: 90px;
 }
 
 /* #Link to page
@@ -535,6 +637,8 @@ i {
   width: 100%;
   margin-top: 10vh;
   min-height: 70vh;
+  height: 100%;
+  padding: 7%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -542,12 +646,27 @@ i {
   background-image: url() ;
   background-size: cover;
   background-position: center;
-  background-image: url('https://i.im.ge/2022/09/18/12NvxY.fond.png');
+  background-image: url('https://i.im.ge/2022/10/12/2on4Ah.ppppoopppp.png');
   
 /*  this is where the magic happens:  */
   background-attachment: fixed;
 }
-
+.containere {
+  text-align: center;
+  color:black;
+  width: 100%;
+  margin-top: -10px;
+  min-height: 70vh;
+  height: 100%;
+  padding: 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url() ;
+  background-size: cover;
+  background-position: center;
+}
 .leter {
   font-weight: 900;
   font-size: 3rem;
@@ -555,8 +674,11 @@ i {
 
 p {
   max-width: 52ch;
+  font-size: 1em;
   line-height: 1.5;
   padding: 1em;
+  font-family: 'Pangolin', cursive;
+
 }
 
 .o {
@@ -571,6 +693,7 @@ p {
   font-weight: 700;
   letter-spacing: .5px;
   position: relative;
+  position: relative;
   font-size: .875rem;
   
 }
@@ -578,6 +701,7 @@ p {
 .o:hover {
   display: inline-block;
   padding: 1em 3.5em;
+  position: relative;
   transition: 1s ease;
   background-color:rgb(255, 162, 0) ;
   color: rgb(0, 0, 0) !important;
@@ -605,6 +729,24 @@ body.dark .o:hover {
 
 .containes {
   display: flex;
+  background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%23FFFFFF'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+  -webkit-display: box;
+  -moz-display: box;
+  -ms-display: flexbox;
+  -webkit-display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+body.dark .containes {
+  display: flex;
+background-color: #000000;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%23000000'/%3E%3Cstop offset='1' stop-color='%23000000'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
   -webkit-display: box;
   -moz-display: box;
   -ms-display: flexbox;
@@ -634,9 +776,10 @@ body.dark .o:hover {
 .cards .card-item {
   display: flex;
   flex-direction: column;
-  background-color: rgb(7, 0, 46);
+  background-color: rgb(255, 255, 255);
   width: 100%;
-  color:rgb(255, 255, 255);
+  border: 1px solid black;
+  color:rgb(0, 0, 0);
   border-radius: 6px;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
   overflow: hidden;
@@ -645,8 +788,11 @@ body.dark .o:hover {
 }
 .cards .card-item:hover {
   cursor: pointer;
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
+  transform-style: preserve-3d;
+    transform: translateY(-20px);
+      box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.658);
+
+
 }
 .cards .card-item:hover .card-image {
   opacity: 1;
@@ -662,7 +808,7 @@ body.dark .o:hover {
 .cards .card-title {
   font-size: 25px;
   line-height: 1.1em;
-  color: #ffbb00;
+  color: #380000;
   margin-bottom: 0.2em;
 }
 body.dark .cards .card-title {
@@ -830,7 +976,7 @@ body.dark .cards .card-title {
 }
 
 .ov-btn-grow-box {
-  background: rgb(1, 13, 82); /* color de fondo */
+  background: rgb(255, 255, 255); /* color de fondo */
   color: #000000; /* color de fuente */
   border: 2px solid #000000; /* tamaño y color de borde */
   padding: 12px 13px;
@@ -848,7 +994,7 @@ body.dark .cards .card-title {
 }
 .ov-btn-grow-box::after {
   content: "";
-  background: #ee2400; /* color de fondo hover */
+  background: #dfdfdf; /* color de fondo hover */
   position: absolute;
   z-index: -1;
   padding: 10px 10px;
@@ -868,7 +1014,7 @@ body.dark .cards .card-title {
 .otro {
 margin: -25px 0 -10px 145px;
 top: -12px;
-  background: rgb(1, 13, 82); /* color de fondo */
+  background: rgba(255, 166, 0, 0.986); /* color de fondo */
   color: #000000; /* color de fuente */
   border: 2px solid #000000; /* tamaño y color de borde */
   padding: 12px 20px;
@@ -903,7 +1049,7 @@ top: -12px;
   transform: scale(1, 1);
 }
 .cards .card-image1 {
-  background-image: url(https://i.im.ge/2022/09/18/12PmWX.arsrebdsgu.png);
+  background-image: url(https://i.im.ge/2022/10/12/2ONCX0.REVOLUCIONFR.png);
   height: 200px;
   overflow: hidden;
   background-size: cover;
@@ -915,7 +1061,7 @@ top: -12px;
 }
 
 .cards .card-image2 {
-  background-image: url(https://i.im.ge/2022/09/18/12P6T8.arsdsgu.png);
+  background-image: url(https://i.im.ge/2022/10/12/2OwDDX.NNNN.png);
   height: 200px;
   overflow: hidden;
   background-size: cover;
@@ -927,7 +1073,7 @@ top: -12px;
 }
 
 .cards .card-image3 {
-  background-image: url(https://i.im.ge/2022/09/18/12P9FK.plantas.png);
+  background-image: url(https://i.im.ge/2022/10/12/2Otgjy.PLANTA.png);
   height: 200px;
   overflow: hidden;
   background-size: cover;
@@ -939,7 +1085,7 @@ top: -12px;
 }
 
 .cards .card-image4 {
-  background-image: url(https://i.im.ge/2022/09/18/12Pjj9.sismos.png);
+  background-image: url(https://i.im.ge/2022/10/12/2OtWTz.PENSILVANIA.png);
   height: 200px;
   overflow: hidden;
   background-size: cover;
@@ -951,7 +1097,7 @@ top: -12px;
 }
 
 .cards .card-image5 {
-  background-image: url(https://i.im.ge/2022/09/18/12P0zF.aguaa.png);
+  background-image: url(https://i.im.ge/2022/10/12/2Ot8WS.DARG.png);
   height: 200px;
   overflow: hidden;
   background-size: cover;
@@ -963,7 +1109,7 @@ top: -12px;
 }
 
 .cards .card-image6 {
-  background-image: url(https://i.im.ge/2022/09/18/12Pit6.picaso.png);
+  background-image: url(https://i.im.ge/2022/10/12/2OtcFJ.DARG-1.png);
   height: 200px;
   overflow: hidden;
   background-size: cover;
@@ -974,6 +1120,19 @@ top: -12px;
   margin: 0.5em;
 }
 	.tag_politica {
+		display:inline-flex;
+		background-color:rgb(0, 15, 58);
+		color:#ffffff;
+		font-weight: 600;
+		width: 80px;
+		font-size: 0.875rem;
+		padding: 0.5em 0.75em;
+		line-height: 1;
+		border-radius: 6px; 
+			margin: 0.5rem;
+      cursor: pointer;
+		}
+    body.dark .tag_politica {
 		display:inline-flex;
 		background-color:rgb(255, 255, 255);
 		color:#000000;
@@ -989,6 +1148,19 @@ top: -12px;
 
     	.tag_entre {
 		display:inline-flex;
+		background-color:rgb(4, 0, 41);
+		color:#ffffff;
+		font-weight: 600;
+		width: 100px;
+		font-size: 0.875rem;
+		padding: 0.5em 0.75em;
+		line-height: 1;
+		border-radius: 6px; 
+			margin: 0.5rem;
+      cursor: pointer;
+		}
+    body.dark .tag_entre {
+		display:inline-flex;
 		background-color:rgb(255, 255, 255);
 		color:#000000;
 		font-weight: 600;
@@ -1003,8 +1175,8 @@ top: -12px;
 
     	.tag_ciencia {
 		display:inline-flex;
-		background-color:rgb(255, 255, 255);
-		color:#000000;
+		background-color:rgb(1, 0, 39);
+		color:#ffffff;
 		font-weight: 600;
 		width: 170px;
 		font-size: 0.875rem;
@@ -1030,6 +1202,19 @@ top: -12px;
 		}
     	.tag_economia {
 		display:inline-flex;
+		background-color:rgb(0, 4, 44);
+		color:#ffffff;
+		font-weight: 600;
+		width: 119px;
+		font-size: 0.875rem;
+		padding: 0.5em 0.75em;
+		line-height: 1;
+		border-radius: 6px; 
+			margin: 0.5rem;
+      cursor: pointer;
+		}
+    body.dark .tag_economia {
+		display:inline-flex;
 		background-color:rgb(255, 255, 255);
 		color:#000000;
 		font-weight: 600;
@@ -1043,6 +1228,20 @@ top: -12px;
 		}
 
     	.tag_deportes {
+		display:inline-flex;
+		background-color:rgb(2, 0, 37);
+		color:#ffffff;
+		font-weight: 600;
+		width: 139px;
+		font-size: 0.875rem;
+		padding: 0.5em 0.75em;
+		line-height: 1;
+		border-radius: 6px; 
+		margin: 0.5rem;
+      cursor: pointer;
+		}
+
+    body.dark .tag_deportes {
 		display:inline-flex;
 		background-color:rgb(255, 255, 255);
 		color:#000000;
@@ -1058,8 +1257,8 @@ top: -12px;
 
     	.tag_arte {
 		display:inline-flex;
-		background-color:rgb(255, 255, 255);
-		color:#000000;
+		background-color:rgb(0, 5, 36);
+		color:#ffffff;
 		font-weight: 600;
 		width: 130px;
 		font-size: 0.875rem;

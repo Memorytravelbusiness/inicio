@@ -47,17 +47,6 @@
 	
 })(jQuery);
   
-function myFunction() {
-	var btn = document.getElementById("myButton");
-	if (btn.value == "Open Curtain") {
-		btn.value = "Close Curtain"; btn.innerHTML = "⚡​ Guardar​​";
-		btn.addEventListener('click', () => myButton.style.backgroundColor="#FF8700")
-	} else {
-		btn.value = "Open Curtain"; btn.innerHTML = "Guardado 🧡​​";
-		btn.addEventListener('click', () => myButton.style.backgroundColor="#001B69")
-	}
-}
-
 function searchToggle(obj, evt){
     var container = $(obj).closest('.search-wrapper');
         if(!container.hasClass('active')){
@@ -80,3 +69,5 @@ $(document).ready(function() {
     }
   });
 });
+
+
